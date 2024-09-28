@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: italic;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo {
+
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+
+    margin-left: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: solid 1px transparent;
+    transition: all .5s ease;
+}
+
+.navlist a:hover {
+
+    border-bottom: 1px solid white;
+}
+
+#menu-icon {
+
+    /* display: none; */
+    color: white;
+    font-size: 35px;
+    z-index: 101;
+    cursor: pointer;
+    ;
+}
+
+#menu-toggle {
+
+    display: none;
+}
+
+#menu-icon-action {
+    display: block;
+    display: none;
+
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(234.5deg, rgb(66, 61, 61), rgb(223, 35, 35));
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+
+}
+section{
+    padding-left: 80px;
+}
+.hero-text{
+    margin-left: 30px;
+}
+
+.hero-text h5{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-text h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.hero-text h1{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+
+}
+
+.hero-text p{
+    font-size: 80%;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+.hero-img{
+    margin-left: 13%;
+    justify-content: center;
+    
+}
+.hero-img img {
+    width: 200px;
+    height: auto;
+    animation: spin 5s linear infinite;
+    transition: all 5s linear;
+}
+
+.hero-img img:hover{
+
+    width: 400px;
+    opacity: 0.2;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-text a{
+
+    display: inline-block;
+    background-color: burlywood;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 6px;
+    font-weight: bolder;
+    color: black;
+    text-transform: uppercase;
+    transition: all 5s ease;
+}
+.hero-text a:hover{
+
+    border: 1px solid black;
+    background-color: transparent;
+    transform: translateX(8px) ;
+}
+
+.hero-text a.videos{
+
+    border: 1px solid black;
+    background-color: transparent;
+    margin-left: 10px;
+}
+.hero-text i{
+
+    vertical-align: middle;
+
+}
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+
+}
+.icons i{
+    display: block;
+    margin: 36px 0;
+    font-size: 35px;
+    transition: all .5s ease;
+}
+.icons i:hover{
+
+    color: black;
+}
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 8%;
+}
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 50px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.scroll-down i:hover{
+    transform: translateY(-10px);
+}
+
+@media (max-width: 900px){
+
+    section{
+        padding: 0 3%;
+        transition: all 2s;
+    }
+    div.icons{
+        display: none;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 150px;
+    }
+    .hero-text{
+        font-size: 15px;
+    }
+
+    .scroll-down{
+        display: none;
+    }
+
+
+    .logo{
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    /* .navlist{
+        display: none;
+    } */
+    #menu-icon-action{
+        display: block;
+    }
+    .hero-img img:hover{
+
+        width: 200px;
+        opacity: 0.2;
+    }
+
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        background-color: #32070757;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+
+    .navlist a{
+        margin: auto;
+        display: block;
+    }
+
+    .navlist li{
+        padding: 10px;
+        margin: auto;
+    }
+    #menu-toggle:checked ~ .navlist {
+        right: 0;
+    }
+
+ 
+}
+
+@media (max-width: 450px){
+
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    .hero-img{
+
+        margin: auto;
+
+    }
+
+    .hero-img img:hover{
+
+        width: 200px;
+        opacity: 0.2;
+    }
+    
+}
